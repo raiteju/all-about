@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -55,7 +55,8 @@ interface SearchResult {
   };
 }
 
-export default function SearchPage() {
+// 👇 Inner component that uses useSearchParams (must be inside Suspense)
+function SearchPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
@@ -344,5 +345,25 @@ export default function SearchPage() {
         </main>
       </div>
     </div>
+  );
+}
+
+// 👇 Default export wraps the inner component in Suspense (fixes the build error)
+export default function SearchPage() {
+  return (
+    <Suspense fallback={
+      <div style={{ 
+        minHeight: '100vh', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        fontSize: '16px',
+        color: '#6b7280'
+      }}>
+        Loading...
+      </div>
+    }>
+      <SearchPageContent />
+    </Suspense>
   );
 }
