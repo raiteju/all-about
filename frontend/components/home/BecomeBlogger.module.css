@@ -1,0 +1,92 @@
+.ctaSection {
+  background: linear-gradient(135deg, #00A8E8 0%, #00B4D8 100%);
+  border-radius: 16px;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin: 60px 0;
+}
+
+/* Decorative Bubbles */
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bubbleLarge {
+  width: 200px;
+  height: 200px;
+  left: -50px;
+  bottom: -50px;
+}
+
+.bubbleSmall {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  top: 20px;
+}
+
+.bubbleMedium {
+  width: 60px;
+  height: 60px;
+  left: 70%;
+  bottom: 10px;
+}
+
+.content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 16px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.buttonWrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.registerBtn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none; /* 👈 NEW: for Link */
+  display: inline-block; /* 👈 NEW: for Link */
+}
+
+.registerBtn:hover {
+  background: white;
+  color: var(--primary-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ctaSection {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+}

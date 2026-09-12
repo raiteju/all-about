@@ -1,0 +1,252 @@
+/* Cards.module.css */
+
+/* 1. Author Card */
+.authorCard {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden; /* Keeps the cover image rounded */
+  text-align: center;
+  padding-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.authorCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Cover Image - Set relative so avatar can overlap it */
+.authorCover {
+  position: relative;
+  height: 140px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Avatar Wrapper - Pull it up and push it forward */
+.authorAvatarWrapper {
+  position: relative;
+  z-index: 2; /* Must be higher than the cover */
+  margin-top: -50px; /* Pulls it up to overlap the cover */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.authorAvatar {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  background-color: #fff; /* Ensures it looks solid even if image is transparent */
+}
+
+.authorName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.authorHandle {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* 2. Audio Card */
+.audioCard {
+  background: transparent; 
+  position: relative;
+  padding-bottom: 24px; 
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.audioCard:hover {
+  transform: translateY(-5px);
+}
+
+.audioImageContainer {
+  position: relative;
+  height: 260px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.audioCategoryTag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #8C5E3C; 
+  color: white;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* The Floating Details Box */
+.audioContent {
+  position: relative;
+  background: #ffffff;
+  margin-top: -50px; /* Overlaps the image */
+  margin-left: 0;    /* Flush against the left edge */
+  margin-right: 24px;
+  padding: 24px;
+  /* This rounds ALL corners EXCEPT the top-left */
+  border-radius: 24px; 
+  border-top-left-radius: 0; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); 
+  z-index: 20;
+}
+
+.audioTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.audioDescription {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.audioStats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statPills {
+  display: flex;
+  gap: 12px;
+}
+
+.statPill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f3f4f6;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.audioBookmark {
+  background: #f3f4f6;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+}
+
+/* 3. Video Card */
+.videoCard {
+  width: 100%;
+  cursor: pointer;
+}
+
+.videoImageContainer {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.videoCategoryTag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(139, 90, 43, 0.8); 
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.bookmarkIcon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.videoPlayButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.videoAuthorAvatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.videoInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.videoTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.videoAuthorName {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}

@@ -1,0 +1,292 @@
+/* SEO.module.css - Tab-specific styles for SEO Settings page */
+
+/* ============ TABS ============ */
+.tabsContainer {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb;
+  overflow-x: auto;
+  padding-bottom: 0;
+}
+
+.tabsContainer::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tabsContainer::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.tab {
+  padding: 12px 18px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tab:hover {
+  color: #00a8e8;
+  background: #f9fafb;
+}
+
+.tabActive {
+  color: #00a8e8;
+  border-bottom-color: #00a8e8;
+  font-weight: 600;
+}
+
+/* ============ TAB CONTENT ============ */
+.tabContent {
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ SECTION ============ */
+.section {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.sectionDescription {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+/* ============ FIELD ============ */
+.fieldGroup {
+  margin-bottom: 16px;
+}
+
+.fieldGroup:last-child {
+  margin-bottom: 0;
+}
+
+.fieldLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.fieldHint {
+  display: block;
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.fieldInput,
+.fieldTextarea,
+.fieldSelect {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+  font-family: inherit;
+  color: #111827;
+  transition: border-color 0.15s;
+}
+
+.fieldInput:focus,
+.fieldTextarea:focus,
+.fieldSelect:focus {
+  border-color: #00a8e8;
+  box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.1);
+}
+
+.fieldTextarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+/* ============ TWO COLUMN ============ */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ============ IMAGE UPLOAD FIELD ============ */
+.imageField {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.imagePreview {
+  position: relative;
+  width: 180px;
+  height: 110px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.imagePreviewEmpty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #9ca3af;
+}
+
+.imageActions {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.imageUploadBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  background: #00a8e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.imageUploadBtn:hover:not(:disabled) {
+  background: #0090c4;
+}
+
+.imageUploadBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.imageUrlInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 12px;
+  outline: none;
+  background: white;
+  color: #6b7280;
+}
+
+.imageUrlInput:focus {
+  border-color: #00a8e8;
+}
+
+.imageRemoveBtn {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #ef4444;
+  color: #ef4444;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.2s;
+}
+
+.imageRemoveBtn:hover {
+  background: #fef2f2;
+}
+
+/* ============ HELPERS ============ */
+.charCounter {
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.charCounterOver {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.iconPicker {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.iconPreview {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.iconInput {
+  flex: 1;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .tab {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+
+  .imageField {
+    flex-direction: column;
+  }
+
+  .imagePreview {
+    width: 100%;
+    max-width: 240px;
+    height: 140px;
+  }
+}

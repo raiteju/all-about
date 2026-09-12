@@ -1,0 +1,242 @@
+/* frontend/app/globals.css */
+
+:root {
+  /* Colors */
+  --primary-blue: #00A8E8;
+  --primary-orange: #F7931E;
+  --primary-bg: #ffffff;
+  --secondary-bg: #f9fafb;
+  --text-dark: #111827;
+  --text-gray: #6b7280;
+  --border-color: #e5e7eb;
+
+  /* Layout & Spacing */
+  --container-width: 1200px;
+  --radius: 16px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  /* 👇 Now uses next/font CSS variable with safe fallbacks */
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Utility Classes */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Section Header Buttons */
+.btn-outline {
+  background: transparent;
+  color: #111;
+  border: 1px solid #e5e7eb;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: #d1d5db;
+}
+
+.pencilIcon {
+  color: var(--primary-orange);
+}
+
+/* Native CSS Carousel */
+.carousel-container {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+/* Hide scrollbar for clean look */
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+.carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Each card inside the carousel */
+.carousel-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* Adjust widths so more than 4 cards are visible */
+.carousel-item-trending {
+  width: 280px; 
+}
+
+.carousel-item-media {
+  width: 340px;
+}
+
+/* Carousel Arrow Buttons */
+.carousel-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.carousel-btn:hover {
+  border-color: #111;
+}
+
+/* Responsive Authors Grid */
+.authorsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+/* Tablet: Show 3 cards per row */
+@media (max-width: 1024px) {
+  .authorsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile: Switch to a professional swipeable carousel */
+@media (max-width: 768px) {
+  .authorsGrid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent 100%);
+    mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  }
+
+  .authorsGrid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .authorsGrid::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 10px;
+  }
+
+  .authorsGrid::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 10px;
+  }
+
+  .authorsGrid > * {
+    flex: 0 0 auto;
+    width: 70%; 
+    scroll-snap-align: center;
+  }
+}
+
+/* Responsive Latest Articles Grid */
+.articleListContainer {
+  gap: 24px;
+  display: grid;
+}
+
+.featuredArticleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+/* MOBILE ONLY: Single column, Featured First, Hide Extra Cards */
+@media (max-width: 768px) {
+  .articlesGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .articleListContainer {
+    order: 2;
+  }
+
+  .featuredArticleContainer {
+    order: 1;
+  }
+
+  .articleListItem {
+    display: none;
+  }
+  
+  .articleListItem:first-child {
+    display: block;
+  }
+}

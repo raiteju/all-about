@@ -1,0 +1,410 @@
+/* Author Profile Page CSS */
+
+/* Full Width Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px 20px;
+}
+
+/* 1. Cover Image - FULL WIDTH, Broken out of container */
+.coverWrapper {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 320px;
+  overflow: hidden;
+}
+
+/* 2. Profile Card (Floating) */
+.profileCardWrapper {
+  position: relative;
+  margin-top: -80px;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.profileCard {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.profileLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.profileAvatarWrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.profileInfo h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.verifiedBadge {
+  color: var(--primary-blue);
+  display: flex;
+}
+
+.profileInfo p {
+  font-size: 15px;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.profileLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-gray);
+  margin-bottom: 16px;
+}
+
+.profileSocials {
+  display: flex;
+  gap: 16px;
+}
+
+.profileSocials a {
+  color: #333;
+  transition: color 0.2s;
+}
+
+.profileSocials a:hover {
+  color: var(--primary-blue);
+}
+
+/* 3. Follow Button & Dropdown */
+.profileRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.followBtn {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.moreBtn {
+  background: #f3f4f6;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* 4. Tabs and Sorting */
+.tabsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+}
+
+.tab {
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  color: var(--text-gray);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tabActive {
+  background: var(--primary-blue);
+  color: white;
+}
+
+/* Filter Dropdown */
+.filterWrapper {
+  position: relative;
+}
+
+.sortBtn {
+  border: 1px solid var(--border-color);
+  background: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 140px;
+  justify-content: space-between;
+}
+
+.filterDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 20;
+  width: 140px;
+  overflow: hidden;
+}
+
+.filterOption {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.filterOption:hover {
+  background: #f9fafb;
+}
+
+.filterOptionActive {
+  background: #f0f9ff;
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+/* 5. Grid of Posts */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* 6. Pagination */
+.paginationRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+}
+
+.pageBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: white;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pageBtnActive {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+}
+
+.showMoreBtn {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
+
+
+/* Following Button State */
+.followBtnFollowing {
+  background: #f3f4f6;
+  color: #333;
+  border: 1px solid #d1d5db;
+}
+
+/* Share Dropdown Container */
+.shareWrapper {
+  position: relative;
+}
+
+/* Dropdown Menu */
+.shareDropdown {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 50;
+  width: 180px;
+}
+
+.shareOption {
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.shareOption:hover {
+  background: #f9fafb;
+}
+/* =========================== */
+/* RESPONSIVE BREAKPOINTS      */
+/* =========================== */
+
+/* Tablet (Max 1024px) */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+  
+  .profileInfo p {
+    max-width: 100%;
+  }
+}
+
+/* Mobile (Max 768px) */
+@media (max-width: 768px) {
+  .coverWrapper { height: 200px; }
+  
+  .profileCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  /* Avatar goes to the top left */
+  .profileLeft {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .profileInfo {
+    width: 100%;
+  }
+
+  .profileRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Tabs and Filter align properly */
+  .tabsRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .tabs {
+    width: 100%;
+    overflow-x: auto; /* Allows tabs to scroll horizontally */
+    padding-bottom: 8px;
+  }
+
+  .tab {
+    white-space: nowrap;
+  }
+
+  .filterWrapper {
+    width: 100%;
+  }
+
+  .sortBtn {
+    width: 100%;
+  }
+
+  .filterDropdown {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+
+  /* Mobile Grid: Only 2 cards per row for better UI */
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  
+  /* Pagination */
+  .paginationRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+.profileCardWrapper { margin-top: -160px; padding: 0;}
+.container { padding-bottom: 30px;}
+
+
+}
+
+/* Small Mobile (Max 480px) */
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+}

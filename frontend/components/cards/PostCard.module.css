@@ -1,0 +1,352 @@
+/* Frontend Design Card Style */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Image Container */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+/* Category Tag */
+.categoryTag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  background: #FDE8D7;
+  color: #F7931E;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Content Area */
+.content {
+  padding: 16px 20px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Author & Date */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Title */
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #111827;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Bottom Actions - FIXED ICON BACKGROUNDS! */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.likes, .comments, .bookmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #F9F9F9;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.bookmark {
+  margin-left: auto;
+  cursor: pointer;
+  padding: 8px 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Horizontal Variant (For Latest Articles) */
+.horizontalCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.horizontalCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* FIX: Fixed the overlapping issue and layout of the horizontal content */
+.horizontalContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.horizontalTitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #111827;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.horizontalImage {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* CRITICAL FIX: Make the Tag always visible on top of the title */
+.horizontalContent .categoryTag {
+  position: static; /* Use static position to flow naturally */
+  display: inline-block;
+  margin-bottom: 12px;
+  z-index: auto;
+}
+
+/* Horizontal Actions - FIXED ICON BACKGROUNDS! */
+.horizontalActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.horizontalActions .likes,
+.horizontalActions .comments,
+.horizontalActions .bookmark {
+  background: #F9F9F9;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.horizontalActions .bookmark {
+  margin-left: auto;
+  padding: 8px 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* FEATURED CARD (Right Column) */
+.featuredCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 16px;
+}
+
+.featuredCard:hover {
+  transform: translateY(-5px);
+}
+
+.featuredImageContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.featuredCategoryTag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  background: #F7931E;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.featuredContent {
+  padding: 0;
+}
+
+.featuredMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.featuredActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.featuredActions .likes,
+.featuredActions .comments {
+  background: #F9F9F9;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.featuredActions .bookmark {
+  margin-left: auto;
+  background: #F9F9F9;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ========== AUTHOR LINK STYLES ========== */
+.authorLink {
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.authorNameLink {
+  color: #111827;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.authorNameLink:hover {
+  color: #00a8e8;
+  text-decoration: underline;
+}
+
+/* Ensure the author wrapper doesn't break layout */
+.author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Make author clickable spans behave like links */
+.authorLink,
+.authorNameLink {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.authorNameLink {
+  color: #111827;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.authorNameLink:hover {
+  color: #00a8e8;
+  text-decoration: underline;
+}
+
+.authorLink {
+  flex-shrink: 0;
+}
+
+/* Author clickable spans */
+.authorLink,
+.authorNameLink {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.authorLink {
+  flex-shrink: 0;
+}
+
+.authorNameLink {
+  color: #111827;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.authorNameLink:hover {
+  color: #00a8e8;
+  text-decoration: underline;
+}
+
+/* Remove default button styles */
+.authorLink:focus-visible,
+.authorNameLink:focus-visible {
+  outline: 2px solid #00a8e8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

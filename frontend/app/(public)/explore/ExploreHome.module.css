@@ -1,0 +1,271 @@
+/* ExploreHome.module.css - Explore landing page */
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+  min-height: 70vh;
+}
+
+/* ========== HERO SECTION ============ */
+.heroSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.heroContent {
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+}
+
+.heroIcon {
+  font-size: 42px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.heroTitle {
+  font-size: 40px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.heroSubtitle {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  max-width: 640px;
+}
+
+.heroCount {
+  display: inline-block;
+  padding: 5px 14px;
+  background: #eff6ff;
+  color: #00a8e8;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  padding-top: 8px;
+}
+
+.breadcrumbLink {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumbLink:hover {
+  color: #00a8e8;
+}
+
+.breadcrumbChevron {
+  color: #d1d5db;
+  font-size: 16px;
+}
+
+.breadcrumbCurrent {
+  color: #374151;
+  font-weight: 500;
+}
+
+/* ========== TYPE CARDS GRID ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.typeCard {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 280px;
+}
+
+.typeCard:hover {
+  transform: translateY(-6px);
+  border-color: #00a8e8;
+  box-shadow: 0 16px 40px rgba(0, 168, 232, 0.12);
+}
+
+.typeCardIcon {
+  font-size: 64px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.typeCard:hover .typeCardIcon {
+  transform: scale(1.1);
+}
+
+.typeCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  flex: 1;
+}
+
+.typeCardTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.typeCardDescription {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.typeCardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.typeCardCount {
+  font-size: 13px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.typeCardArrow {
+  font-size: 14px;
+  color: #00a8e8;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.typeCard:hover .typeCardArrow {
+  transform: translateX(4px);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .heroTitle {
+    font-size: 34px;
+  }
+
+  .typeCard {
+    padding: 32px 24px;
+    min-height: 240px;
+  }
+
+  .typeCardIcon {
+    font-size: 52px;
+  }
+
+  .typeCardTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px 60px 16px;
+  }
+
+  .heroSection {
+    flex-direction: column-reverse;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+  }
+
+  .breadcrumb {
+    padding-top: 0;
+  }
+
+  .heroIcon {
+    font-size: 34px;
+  }
+
+  .heroTitle {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+  }
+
+  .heroSubtitle {
+    font-size: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .typeCard {
+    padding: 28px 24px;
+    min-height: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .typeCardIcon {
+    font-size: 48px;
+    flex-shrink: 0;
+  }
+
+  .typeCardTitle {
+    font-size: 20px;
+  }
+
+  .typeCardDescription {
+    font-size: 14px;
+  }
+
+  .typeCardFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 22px;
+  }
+}

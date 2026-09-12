@@ -1,0 +1,240 @@
+/* Edit Profile & Add Post Shared CSS */
+
+/* Main Container */
+.formContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Welcome Header */
+.welcomeTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.welcomeSubtitle {
+  font-size: 15px;
+  color: var(--text-gray);
+  margin-bottom: 30px;
+}
+
+/* Shared Form Section Header */
+.formSectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.formInput, 
+.formTextarea, 
+.formSelect {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 15px;
+  outline: none;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.formInput:focus, 
+.formTextarea:focus, 
+.formSelect:focus {
+  border-color: var(--primary-blue);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formHint {
+  font-size: 13px;
+  color: var(--text-gray);
+  margin-top: 8px;
+}
+
+/* Two Column Row */
+.twoColRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Profile Picture Upload */
+.uploadBox {
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  background: #fafafa;
+  margin-bottom: 24px;
+}
+
+.uploadBox:hover {
+  border-color: var(--primary-blue);
+}
+
+.uploadIcon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--text-gray);
+}
+
+.uploadText {
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+/* Submit Button */
+.submitBtn {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: opacity 0.2s;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .twoColRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .formContainer {
+    padding: 40px 16px;
+  }
+}
+
+
+/* Post Type Toggle */
+.postTypeToggle {
+  display: flex;
+  gap: 12px;
+}
+
+.postTypeBtn {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-gray);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.postTypeActive {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+/* Rich Text Editor */
+.editorContainer {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.editorToolbar {
+  background: #f9fafb;
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  gap: 8px;
+}
+
+.toolbarBtn {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.editorTextarea {
+  width: 100%;
+  border: none;
+  padding: 16px;
+  font-size: 15px;
+  outline: none;
+  min-height: 250px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* React Quill Editor Overrides */
+.editorContainer {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  /* Remove any box-shadow just in case */
+  box-shadow: none;
+}
+
+.ql-toolbar.ql-snow {
+  border: 0 !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  background: #f9fafb;
+  border-radius: 12px 12px 0 0;
+}
+
+.ql-container.ql-snow {
+  border: 0 !important;
+  box-shadow: none;
+  border-radius: 0 0 12px 12px;
+  overflow-y: auto;
+}
+
+.ql-editor {
+  min-height: 250px;
+  padding: 16px;
+  box-shadow: none;
+}
+
+/* Force the inside container to not have a border */
+.ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button {
+  border: none;
+  box-shadow: none;
+}

@@ -1,0 +1,333 @@
+/* Page.module.css - Dynamic Page Renderer */
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 24px 80px 24px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* ========== BREADCRUMB ========== */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.breadcrumbLink {
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumbLink:hover {
+  color: #00a8e8;
+}
+
+.breadcrumbChevron {
+  color: #d1d5db;
+  font-size: 16px;
+}
+
+.breadcrumbCurrent {
+  color: #374151;
+  font-weight: 500;
+}
+
+/* ========== HERO SECTION ========== */
+.heroSection {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pageTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.pageExcerpt {
+  font-size: 18px;
+  color: #6b7280;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========== FEATURED IMAGE ========== */
+.featuredImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 48px;
+  background: #f3f4f6;
+}
+
+/* ========== CONTENT ========== */
+.contentWrapper {
+  background: white;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.pageContent {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #374151;
+  font-family: inherit;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Ensure ALL children respect the container width */
+.pageContent * {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* Rich content typography (matches Quill output) */
+.pageContent h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.pageContent h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 36px;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+.pageContent h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.pageContent p {
+  margin-bottom: 20px;
+  color: #374151;
+  line-height: 1.8;
+}
+
+.pageContent a {
+  color: #00a8e8;
+  text-decoration: underline;
+  transition: color 0.2s;
+  word-break: break-word;
+}
+
+.pageContent a:hover {
+  color: #0090c4;
+}
+
+.pageContent ul,
+.pageContent ol {
+  margin-bottom: 20px;
+  padding-left: 28px;
+}
+
+.pageContent li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+
+.pageContent blockquote {
+  border-left: 4px solid #00a8e8;
+  padding-left: 20px;
+  margin: 24px 0;
+  font-style: italic;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.pageContent img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 24px 0;
+  display: block;
+}
+
+.pageContent strong {
+  font-weight: 700;
+  color: #111827;
+}
+
+.pageContent em {
+  font-style: italic;
+}
+
+.pageContent code {
+  background: #f3f4f6;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 15px;
+  color: #e11d48;
+  word-break: break-word;
+}
+
+.pageContent pre {
+  background: #1f2937;
+  color: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 24px 0;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.pageContent pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.pageContent hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 40px 0;
+}
+
+.pageContent table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  display: block;
+  overflow-x: auto;
+}
+
+.pageContent table th,
+.pageContent table td {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.pageContent table th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+/* ========== CONTACT FORM SECTION ========== */
+.contactFormSection {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* ========== META FOOTER ========== */
+.metaFooter {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.metaText {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .pageTitle {
+    font-size: 40px;
+  }
+
+  .featuredImageWrapper {
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px 60px 16px;
+  }
+
+  .pageTitle {
+    font-size: 30px;
+    letter-spacing: -0.5px;
+  }
+
+  .pageExcerpt {
+    font-size: 16px;
+  }
+
+  .featuredImageWrapper {
+    height: 220px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+
+  .pageContent {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .pageContent h1 {
+    font-size: 28px;
+  }
+
+  .pageContent h2 {
+    font-size: 22px;
+  }
+
+  .pageContent h3 {
+    font-size: 18px;
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .contactFormSection {
+    margin-top: 40px;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: 26px;
+  }
+
+  .featuredImageWrapper {
+    height: 180px;
+  }
+}

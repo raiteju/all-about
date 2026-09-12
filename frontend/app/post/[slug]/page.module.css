@@ -1,0 +1,291 @@
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  font-size: 14px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 8px;
+  color: var(--text-gray);
+}
+
+.breadcrumbLink { color: var(--text-gray); text-decoration: none; }
+.breadcrumbCurrent { color: var(--primary-orange); font-weight: 500; }
+
+/* Main Grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 60px;
+  align-items: start;
+}
+
+.mainGrid > div:first-child {
+  min-width: 0;
+}
+
+.articleBody {
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.articleBody p {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Article Meta */
+.articleMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.authorInfo { display: flex; align-items: center; gap: 12px; }
+.authorName { font-weight: 500; color: var(--text-dark); }
+.statsInfo { display: flex; align-items: center; gap: 20px; }
+
+/* Article Title & Content */
+.articleTitle {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.articleBody p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 24px;
+}
+
+/* Comments */
+.commentsSection { margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px; }
+.commentsTitle { font-size: 24px; font-weight: 600; margin-bottom: 20px; }
+.commentForm { display: flex; flex-direction: column; gap: 16px; margin-bottom: 30px; }
+.commentInput { width: 100%; padding: 16px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 15px; outline: none; background: #f9fafb; resize: vertical; }
+.commentButtons { display: flex; gap: 12px; }
+.submitBtn { background: var(--primary-orange); color: white; border: none; padding: 12px 24px; border-radius: 30px; font-weight: 600; cursor: pointer; }
+.cancelBtn { background: #f3f4f6; color: var(--text-dark); border: none; padding: 12px 24px; border-radius: 30px; font-weight: 600; cursor: pointer; }
+.commentItem { border-bottom: 1px solid #f0f0f0; padding-bottom: 20px; margin-bottom: 20px; }
+.commentHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.commentAuthorInfo { display: flex; align-items: center; gap: 12px; font-weight: 500; color: var(--text-dark); }
+.commentDate { font-size: 13px; color: var(--text-gray); font-weight: 400; }
+.commentReply { font-size: 13px; color: var(--text-gray); cursor: pointer; }
+.viewAllCommentsBtn { background: var(--primary-orange); color: white; width: 100%; border: none; padding: 16px; border-radius: 30px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 20px; }
+
+/* Sidebar */
+.sidebar { display: flex; flex-direction: column; gap: 24px; position: sticky; top: 100px; }
+.sidebarBox { background: var(--secondary-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; }
+.sidebarTitle { font-size: 20px; font-weight: 600; margin-bottom: 16px; text-align: center; }
+.sidebarAbout { text-align: center; }
+.sidebarAboutImage { border-radius: 50%; margin-bottom: 16px; }
+.sidebarAboutText { font-size: 14px; color: var(--text-gray); line-height: 1.6; margin-bottom: 12px; }
+.sidebarSignature { font-family: 'Brush Script MT', cursive; font-size: 24px; color: #333; }
+.categoryList { list-style: none; padding: 0; }
+.categoryItem { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border-color); }
+.categoryThumb { border-radius: 8px; }
+.categoryName { flex: 1; font-weight: 500; color: var(--text-dark); }
+.categoryCount { font-size: 12px; color: var(--text-gray); }
+.tagsContainer { display: flex; flex-wrap: wrap; gap: 8px; }
+.tagPill { border: 1px solid var(--border-color); border-radius: 20px; padding: 6px 16px; font-size: 13px; color: var(--text-gray); cursor: pointer; background: white; }
+
+/* Related */
+.relatedSection { margin-top: 80px; padding-bottom: 70px }
+.sectionHeader { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; }
+.sectionTitle { color: var(--primary-orange); font-size: 28px; font-weight: 700; }
+.sectionSubtitle { color: var(--text-gray); font-size: 15px; }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+/* Full width modifications for Audio & Video */
+.audioFullWidth {
+  padding: 0 !important;
+}
+
+.videoFullWidth {
+  padding: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mainGrid { grid-template-columns: 1fr; }
+  .sidebar { order: 2; position: static; }
+  .grid4 { grid-template-columns: repeat(2, 1fr); }
+
+  .audioFullWidth {padding: 0 !important;}
+  .audioFullWidth  .mainGrid, .videoFullWidth .mainGrid { padding: 0 20px;}
+
+  .audioFullWidth .relatedSection, .videoFullWidth .relatedSection { padding: 0 20px 30px 20px;}
+}
+
+@media (max-width: 768px) {
+  .articleTitle { font-size: 28px; }
+  .grid4 { grid-template-columns: 1fr; }
+  .relatedSection { margin-top: 30px; padding: 0;}
+}
+
+/* The background of Video MUST start from Left 0 */
+.videoFullWidth {
+  padding: 0 !important;
+}
+
+/* --- SIDEBAR DESIGN (Fieldset Style) --- */
+.sidebarAbout {
+  text-align: center;
+  padding: 0;
+}
+
+.sidebarAboutImageWrapper {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.sidebarAboutText {
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.sidebarSignature {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 28px;
+  color: #111;
+  margin-bottom: 0;
+}
+
+.categoryList {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.categoryItem {
+ display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  text-decoration: none;  /* 👈 ADDED: so the Link looks identical to the old li */
+  color: inherit;         /* 👈 ADDED: prevents default blue link color leaking */
+}
+
+.categoryItem:last-child {
+  border-bottom: none;
+}
+
+.categoryThumb {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.categoryName {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.categoryCount {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 20px;
+}
+
+.tagPill {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--text-gray);
+  cursor: pointer;
+  transition: border-color 0.2s;
+  text-decoration: none;  /* 👈 ADDED */
+  display: inline-block;  /* 👈 ADDED */
+}
+
+.tagPill:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+/* Box with fieldset legend title */
+.sidebarBox {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-top: 0;
+  padding: 0 0 20px 0;
+  margin-bottom: 40px;
+  border-radius: 0;
+}
+
+.sidebarTitle {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #111;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: -12px;
+}
+
+.sidebarTitle::before,
+.sidebarTitle::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebarAboutImageWrapper {
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  width: calc(100% - 32px);
+  height: 250px;
+  position: relative;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.sidebarAboutText {
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.sidebarSignature {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 28px;
+  color: #111;
+  margin-bottom: 0;
+  padding: 0 16px;
+}

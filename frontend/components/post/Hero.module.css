@@ -1,0 +1,407 @@
+/* --- 1. ARTICLE HERO (Standard Full Width) --- */
+.articleHeroWrapper {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 24px;
+  display: block;
+}
+
+/* Base Article Breadcrumb Row */
+.articleBreadcrumbRow { 
+  display: flex; 
+  justify-content: space-between; 
+  padding-bottom: 20px; 
+}
+
+.articleBreadcrumbLinks { 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+.articleBreadcrumbLink {
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.articleBreadcrumbChevron {
+  color: #c7c7c7;
+  font-size: 12px;
+}
+
+.articleBreadcrumbCurrent {
+  color: var(--primary-orange);
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Category Tag on the right */
+.articleBreadcrumbRow > span:last-child {
+  background: var(--primary-orange);
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Base Article Meta Row */
+.articleMetaRow {
+  color: var(--text-gray);
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  display: flex;
+  padding-bottom: 40px;
+}
+
+/* REMOVED .articleMetaRow div and ADDED the exact classes below! */
+.articleAuthor {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.articleStats {
+  align-items: center;
+  gap: 16px;
+  display: flex;
+}
+
+/* --- 2. AUDIO HERO (PERFECT - DO NOT TOUCH) --- */
+.audioHeroContainer { width: 100%; margin-top: 0; margin-bottom: 80px; }
+.audioBg { position: relative; width: 100vw; margin-left: calc(50% - 50vw); height: 400px; overflow: hidden; margin-bottom: -180px; }
+.audioOverlayCard { position: relative; background: white; border-radius: 16px; box-shadow: 0 12px 32px rgba(0,0,0,0.12); padding: 32px; margin: 0 auto; z-index: 20; }
+.audioCardInner { display: flex; align-items: flex-start; gap: 32px; }
+.audioThumbArea { position: relative; width: 100px; height: 100px; border-radius: 50%; overflow: hidden; flex-shrink: 0; margin-top: 10px; }
+.audioPlayOverlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.5); border-radius: 50%; width: 36px; height: 36px; display: flex; justify-content: center; align-items: center; }
+.audioInfo { flex: 1; }
+.audioBreadcrumbs { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; font-size: 13px; }
+.audioBreadcrumbLinks { display: flex; gap: 6px; color: var(--text-gray); }
+.audioBreadcrumbCurrent { color: var(--primary-orange); max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.audioCategoryTag { background: var(--primary-orange); color: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.audioTitle { font-size: 28px; font-weight: 700; margin: 0 0 12px 0; color: #333; }
+.audioDescription { font-size: 15px; color: var(--text-gray); line-height: 1.6; margin-bottom: 24px; }
+.audioBottomMeta { display: flex; justify-content: space-between; align-items: center; color: var(--text-gray); font-size: 14px; }
+.audioAuthorRow { display: flex; align-items: center; gap: 8px; }
+.audioStatsRow { display: flex; align-items: center; gap: 20px; justify-content: flex-end; flex: 1; margin-left: 20px; }
+.audioIcon { width: 32px; height: 32px; border-radius: 50%; background: #f3f4f6; display: flex; justify-content: center; align-items: center; }
+
+/* --- 3. VIDEO HERO (FROZEN - EXACT COPY OF USER HTML) --- */
+.videoHeroContainer {
+  width: 100vw;
+  max-width: 1600px;
+  height: 700px;
+  margin: 0 auto 40px 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+.videoHeroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 625px;
+  background: #ececec;
+  border-radius: 0 0 70px 0;
+}
+
+.videoPlayer {
+  position: absolute;
+  top: 57px;
+  left: 40%;
+  width: 48%;
+  height: 495px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0, 0.28);
+}
+
+.playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(255,255,255, 0.25);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.playBtnInner {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0, 0.2);
+}
+
+.videoContent {
+  position: absolute;
+  top: 150px;
+  left: 13%;
+  width: 400px;
+  max-width: 40%;
+}
+
+.videoTag {
+  display: inline-block;
+  background: #F4801F;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 22px;
+  border-radius: 20px;
+  margin-bottom: 26px;
+}
+
+.videoTitle {
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #37383d;
+  margin-bottom: 26px;
+}
+
+.videoDivider {
+  height: 1px;
+  width: 100%;
+  background: #dcdcdc;
+  margin-bottom: 24px;
+}
+
+.videoAuthorRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.videoAuthorAvatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.videoAuthorName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2b2b2f;
+  margin: 0;
+}
+
+.videoAuthorDate {
+  font-size: 12.5px;
+  color: #9a9a9a;
+  margin-top: 2px;
+}
+
+.videoStats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.videoStatPill, .videoStatIcon {
+  background: #ffffff;
+  border: 1px solid #ececec;
+  box-shadow: 0 2px 8px rgba(0,0,0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.videoStatPill {
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  color: #3a3a3a;
+  font-weight: 500;
+}
+
+.videoStatIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #3a3a3a;
+}
+
+.videoBreadcrumbs {
+  color: #9a9a9a;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.videoBreadcrumbCurrent { 
+  color: #F4801F; 
+  font-weight: 500; 
+}
+
+.videoBreadcrumbChevron { 
+  color: #c7c7c7; 
+  font-size: 12px; 
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  
+  /* --- ARTICLE --- */
+  .articleBreadcrumbRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .articleHeroWrapper {
+    height: 280px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+
+  .articleMetaRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0 0 20px 0;
+    margin-top: 16px;
+  }
+}
+
+/* --- AUDIO & VIDEO RESPONSIVE (FROZEN) --- */
+@media (max-width: 900px) {
+  /* AUDIO */
+  .audioHeroContainer {
+    margin-bottom: 60px;
+  }
+  .audioBg {
+    height: 280px;
+    margin-bottom: -120px;
+  }
+  .audioOverlayCard {
+    width: 90%;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  .audioCardInner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .audioThumbArea {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  .audioBreadcrumbs {
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .audioBreadcrumbLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px;
+  }
+  .audioTitle {
+    font-size: 22px;
+  }
+  .audioDescription {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .audioBottomMeta {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .audioStatsRow {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* VIDEO */
+  .videoHeroContainer {
+    height: auto;
+    padding-bottom: 30px;
+    width: 100%;
+    margin: 0 auto;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .videoHeroBg {
+    display: none;
+  }
+  .videoContent {
+    position: relative;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .videoPlayer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 280px;
+    border-radius: 16px;
+    margin-top: 0;
+  }
+  .videoTitle {
+    font-size: 26px;
+  }
+  .videoStats {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .videoBreadcrumbs {
+    position: relative;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .articleBreadcrumbRow { padding-bottom: 20px;}
+}
+
+@media (max-width: 540px) {
+  .audioBg { height: 170px; }
+  .audioHeroContainer { margin-bottom: 30px; }
+  .videoHeroContainer { height: auto; }
+  .videoPlayer { height: 200px; }
+}
