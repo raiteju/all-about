@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { API_URL } from '@/lib/api';
 import styles from './ResetPassword.module.css';
 
-export default function ResetPasswordPage() {
+// 👇 Inner component that uses useSearchParams (must be inside Suspense)
+function ResetPasswordContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
@@ -183,5 +184,25 @@ export default function ResetPasswordPage() {
         </p>
       </div>
     </div>
+  );
+}
+
+// 👇 Default export wraps the inner component in Suspense (fixes the build error)
+export default function ResetPasswordPage() {
+  return (
+    <Suspense fallback={
+      <div style={{ 
+        minHeight: '100vh', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center',
+        fontSize: '16px',
+        color: '#6b7280'
+      }}>
+        Loading...
+      </div>
+    }>
+      <ResetPasswordContent />
+    </Suspense>
   );
 }
