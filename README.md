@@ -24,6 +24,65 @@ The platform supports three content types (**Articles**, **Audio**, **Video**), 
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Homepage
+> Dynamic hero with live search, trending authors, multi-format content sections, and newsletter CTA.
+
+![Homepage](./screenshots/01-homepage.jpg)
+
+### 🔍 Explore Landing
+> Discover content by type — Articles, Audio, and Video — with custom titles, icons, and descriptions managed from the admin panel.
+
+![Explore Landing](./screenshots/02-explore.jpg)
+
+### 📝 Single Post Page
+> Full reading experience with featured image, rich content, author info, comments, likes, and social sharing.
+
+![Single Post](./screenshots/03-single-post.jpg)
+
+### 👤 Author Profile
+> Public creator profile with bio, follower count, follow button, and their published catalog.
+
+![Author Profile](./screenshots/04-author-profile.jpg)
+
+### 📚 Categories
+> Browse all categories with dynamic imagery and post counts.
+
+![Categories](./screenshots/05-categories.jpg)
+
+### 📂 Single Category
+> Category-specific view with paginated posts and SEO-optimized metadata.
+
+![Category Single](./screenshots/06-category-single.jpg)
+
+### 🔐 Google Login
+> Dual-path authentication — email/password or one-click Google OAuth, both converging on the same JWT flow.
+
+![Google Login Modal](./screenshots/07-google-login.jpg)
+
+### ✍️ Add New Post
+> Rich text editor (Quill) with Cloudinary uploads, live image preview, and a lean Yoast-style SEO panel.
+
+![Add Post](./screenshots/08-add-post.jpg)
+
+### 🖊️ Edit Post
+> Same powerful editor in edit mode, with SEO analysis and image management.
+
+![Edit Post](./screenshots/09-edit-post.jpg)
+
+### ⚙️ Admin Panel
+> Full CMS with user management, content moderation, newsletter subscribers, contact submissions, and site-wide settings.
+
+![Admin Panel](./screenshots/10-admin-panel.jpg)
+
+### 🎛️ Homepage & SEO Management
+> Six-tab admin panel for managing homepage sections, explore page settings, and site-wide SEO defaults.
+
+![Admin Pages SEO](./screenshots/11-admin-pages-seo.jpg)
+
+---
+
 ## ✨ Key Features
 
 ### 📝 For Creators
@@ -284,7 +343,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](./LICEN
 ## 👤 Author
 
 **Teju Rai**
-- Website: [tejurai.com](https://tejurai.com/)
+- 🌐 Website: [tejurai.com](https://tejurai.com/)
 - GitHub: [@raiteju](https://github.com/raiteju)
 - LinkedIn: [linkedin.com/in/teju-rai](https://linkedin.com/in/teju-rai)
 - Live Demo: [all-about.vercel.app](https://all-about.vercel.app) *(coming soon)*
